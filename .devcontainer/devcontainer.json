@@ -4,7 +4,7 @@
 
   "onCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg",
 
-  "postCreateCommand": "pip install -e . && pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install websockets faster-whisper",
+  "postCreateCommand": "cd /workspaces/wlk2/WhisperLiveKit && pip install -e . && pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install faster-whisper websockets python-multipart",
 
   "forwardPorts": [8000],
 
@@ -19,7 +19,12 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-python.pylance"
+        "ms-python.pylance",
+        "charliermarsh.ruff",
+        "anthropic.claude-code",
+        "eamodio.gitlens",
+        "oderwat.indent-rainbow",
+        "wayou.vscode-todo-highlight"
       ]
     }
   }
